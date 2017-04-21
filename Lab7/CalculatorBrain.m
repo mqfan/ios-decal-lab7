@@ -69,10 +69,17 @@
     }
     return false;
 }
+
 - (void)tangentCalculationString {
     double input = [_calculationString doubleValue];
     _calculationString = [NSString stringWithFormat:@"%.02f",tan(input) ];
 }
+
+- (void)squareCalculationString {
+    double input = [_calculationString doubleValue];
+    _calculationString = [NSString stringWithFormat:@"%.02f",input * input ];
+}
+
 - (void)commitAction {
     double operand1 = [_savedOperand doubleValue];
     double operand2 = [_calculationString doubleValue];
